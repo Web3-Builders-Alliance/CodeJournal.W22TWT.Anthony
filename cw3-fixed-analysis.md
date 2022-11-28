@@ -293,6 +293,8 @@ min range is None, max is end & order is Descending
   - how to create | vote | execute | close a proposal
 - env param contains info on blockHeight and can be used for Expiration
 - how to use pagination in queries that return lists
+- `ok_or()` to throw specific error
+- cmp crate to compare value
 
 #### Things i'm not sure i got right:
 
