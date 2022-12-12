@@ -33,7 +33,6 @@ pub struct CollectionParams {
     pub info: CollectionInfo<RoyaltyInfoResponse>,
 }
 
-/// Message for params so they can be updated invidiually by governance
 #[cw_serde]
 pub struct UpdateMinterParamsMsg<T> {
     /// The minter code id
@@ -51,7 +50,7 @@ pub enum Sg2ExecuteMsg<T> {
 }
 ```
 
-which suggests that params can be updated by governance
+which suggests that all those params can be updated by governance
 
 ### Instantiate:
 
@@ -164,6 +163,6 @@ if let Some(creation_fee) = param_msg.creation_fee {
 
 - this contract is central to stargaze activity as it's the one instantiating minter which will be able to mint sg721 for their collections.
 
-#### Things i'm not sure i got right':
+#### Things i'm not sure i got right:
 
 - at first msg.rs file was quite confusing as almost all it contains is related to sudo params update which is not in the execute entry point
